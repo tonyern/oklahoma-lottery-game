@@ -18,14 +18,15 @@ namespace OK_Lottery_Commission
                 foreach (var item in array)
                 {
                     // Extract the games.
-                    string gameCombo = "";
+                    string gameCombo = "[";
                     foreach (string str in item.games_played)
                     {
                         if (!str.Equals(""))
                         {
-                            gameCombo += string.Concat(str + " ");
+                            gameCombo += string.Concat(str + ", ");
                         }
                     }
+                    gameCombo += string.Concat("]");
 
                     // Store games within dictionary as keys.
                     // If a certain game combo is not in dictionary. Value is 1 as first one entered.
@@ -44,7 +45,7 @@ namespace OK_Lottery_Commission
                 // Loop through the count dictionary to output game combo and occurence.
                 foreach (var key in count.Keys)
                 {
-                    Console.WriteLine(key + "appears " + count[key] + " times.");
+                    Console.WriteLine(key + " appears " + count[key] + " times.");
                 }
             }
         }
