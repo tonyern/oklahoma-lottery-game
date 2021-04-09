@@ -1,0 +1,16 @@
+/home/tonyern/Documents/OK-Lottery-Commission/bin/Debug/net5.0/OK-Lottery-Commission
+/home/tonyern/Documents/OK-Lottery-Commission/bin/Debug/net5.0/OK-Lottery-Commission.deps.json
+/home/tonyern/Documents/OK-Lottery-Commission/bin/Debug/net5.0/OK-Lottery-Commission.runtimeconfig.json
+/home/tonyern/Documents/OK-Lottery-Commission/bin/Debug/net5.0/OK-Lottery-Commission.runtimeconfig.dev.json
+/home/tonyern/Documents/OK-Lottery-Commission/bin/Debug/net5.0/OK-Lottery-Commission.dll
+/home/tonyern/Documents/OK-Lottery-Commission/bin/Debug/net5.0/ref/OK-Lottery-Commission.dll
+/home/tonyern/Documents/OK-Lottery-Commission/bin/Debug/net5.0/OK-Lottery-Commission.pdb
+/home/tonyern/Documents/OK-Lottery-Commission/obj/Debug/net5.0/OK-Lottery-Commission.csprojAssemblyReference.cache
+/home/tonyern/Documents/OK-Lottery-Commission/obj/Debug/net5.0/OK-Lottery-Commission.GeneratedMSBuildEditorConfig.editorconfig
+/home/tonyern/Documents/OK-Lottery-Commission/obj/Debug/net5.0/OK-Lottery-Commission.AssemblyInfoInputs.cache
+/home/tonyern/Documents/OK-Lottery-Commission/obj/Debug/net5.0/OK-Lottery-Commission.AssemblyInfo.cs
+/home/tonyern/Documents/OK-Lottery-Commission/obj/Debug/net5.0/OK-Lottery-Commission.csproj.CoreCompileInputs.cache
+/home/tonyern/Documents/OK-Lottery-Commission/obj/Debug/net5.0/OK-Lottery-Commission.dll
+/home/tonyern/Documents/OK-Lottery-Commission/obj/Debug/net5.0/ref/OK-Lottery-Commission.dll
+/home/tonyern/Documents/OK-Lottery-Commission/obj/Debug/net5.0/OK-Lottery-Commission.pdb
+/home/tonyern/Documents/OK-Lottery-Commission/obj/Debug/net5.0/OK-Lottery-Commission.genruntimeconfig.cache
