@@ -17,7 +17,7 @@ namespace OK_Lottery_Commission
 
                 foreach (var item in array)
                 {
-                    // Extract the games. Add keyword "and" between each game.
+                    // Extract the games.
                     string gameCombo = "";
                     foreach (string str in item.games_played)
                     {
