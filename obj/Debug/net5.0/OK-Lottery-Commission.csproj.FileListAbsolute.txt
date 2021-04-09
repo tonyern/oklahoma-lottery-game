@@ -14,3 +14,5 @@
 /home/tonyern/Documents/OK-Lottery-Commission/obj/Debug/net5.0/ref/OK-Lottery-Commission.dll
 /home/tonyern/Documents/OK-Lottery-Commission/obj/Debug/net5.0/OK-Lottery-Commission.pdb
 /home/tonyern/Documents/OK-Lottery-Commission/obj/Debug/net5.0/OK-Lottery-Commission.genruntimeconfig.cache
+/home/tonyern/Documents/OK-Lottery-Commission/bin/Debug/net5.0/Newtonsoft.Json.dll
+/home/tonyern/Documents/OK-Lottery-Commission/obj/Debug/net5.0/OK-Lottery-Commission.csproj.CopyComplete

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "qrRtJGMTpZIf2dYmQdw1NJlNkcuyZZc8uOAg6xar6IkSDfQo0SURopjlg6WHqKUV8i35Gd0F5gShKBIA4LPP6Q==",
+  "dgSpecHash": "ds8ZhrUTHEwXvzyx6ZDS5nFKUKnGB6k/EfKhirHRCC8iTGttUsMLhw5UWiYlP5f9hjUWAmw+hL03rlOWrU1DfA==",
   "success": true,
   "projectFilePath": "/home/tonyern/Documents/OK-Lottery-Commission/OK-Lottery-Commission.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/tonyern/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
