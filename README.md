@@ -9,13 +9,13 @@ I made use of Dictionary with the C# Collections Generic.
 
 ## Example
 ### `First`
-I created a dictionary. Dictionary<string, int> count.\
+I created a dictionary. Dictionary<string, int> count.
 
 ### `Second`
-I took ["Bingo","Payday"] and extract it to create a string like so "Bingo, Payday, ".\
+I took ["Bingo","Payday"] and extract it to create a string like so "Bingo, Payday, ".
 
 ### `Third`
-I used "Bingo, Payday, " as the key with value being the number of times it appeared. Also value increments if key appears again.\
+I used "Bingo, Payday, " as the key with value being the number of times it appeared. Also value increments if key appears again.
 
 ### `Fourth`
 Fourth, repeat until end.
