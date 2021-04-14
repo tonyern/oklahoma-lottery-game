@@ -7,7 +7,7 @@ namespace OK_Lottery_Commission
 {
     class Program
     {
-        static void loadJson()
+        static Dictionary<string, int> loadJson()
         {
             using (var reader = new StreamReader("lottery.json"))
             using (var jsonTextReader = new JsonTextReader(reader))
@@ -27,11 +27,19 @@ namespace OK_Lottery_Commission
 
                     game.Sort();
 
-                    string gameCombo = "";
-                    foreach (string name in game)
+                    string gameCombo = "[";
+                    for (int i = 0; i < game.Count; i++)
                     {
-                        gameCombo += string.Concat(name + ", ");
+                        if (i != game.Count - 1)
+                        {
+                            gameCombo += string.Concat(game[i] + ", ");
+                        }
+                        else
+                        {
+                            gameCombo += string.Concat(game[i]);
+                        }
                     }
+                    gameCombo += string.Concat("]");
 
                     // Store games within dictionary as keys.
                     // If a certain game combo is not in dictionary. Value is 1 as first one entered.
@@ -47,17 +55,18 @@ namespace OK_Lottery_Commission
                     }
                 }
 
-                // Loop through the count dictionary to output game combo and occurence.
-                foreach (var key in count.Keys)
-                {
-                    Console.WriteLine(key + " was played " + count[key] + " times.");
-                }
+                return count;
             }
         }
 
         static void Main(string[] args)
         {
-            loadJson();
+            Dictionary<string, int> gameData = loadJson();
+            // Loop through the count dictionary to output game combo and occurence.
+            foreach (var key in gameData.Keys)
+            {
+                Console.WriteLine(key + " was played " + gameData[key] + " times.");
+            }
         }
     }
 }
