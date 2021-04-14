@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Net;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
@@ -7,14 +8,17 @@ namespace OK_Lottery_Commission
 {
     class Program
     {
-        static dynamic loadJson()
+        static dynamic loadJson(string url)
         {
-            using (var reader = new StreamReader("lottery.json"))
-            using (var jsonTextReader = new JsonTextReader(reader))
-            {
-                dynamic array = new JsonSerializer().Deserialize(jsonTextReader);
-                return array;
-            }
+            Uri uri = new Uri(url);
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(uri);
+            request.Method = WebRequestMethods.Http.Get;
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            StreamReader reader = new StreamReader(response.GetResponseStream());
+            dynamic array = JsonConvert.DeserializeObject(reader.ReadToEnd());
+            response.Close();
+
+            return array;
         }
 
         static Dictionary<string, int> getGamesPlayed(dynamic array)
@@ -66,7 +70,7 @@ namespace OK_Lottery_Commission
 
         static void Main(string[] args)
         {
-            Dictionary<string, int> gameData = getGamesPlayed(loadJson());
+            Dictionary<string, int> gameData = getGamesPlayed(loadJson("https://www.lottery.ok.gov/plays.json"));
             // Loop through the count dictionary to output game combo and occurence.
             foreach (var key in gameData.Keys)
             {
