@@ -9,12 +9,13 @@ namespace OK_Lottery_Commission
     {
         static Dictionary<string, int> loadJson()
         {
+            // Store games in here.
+            Dictionary<string, int> count = new Dictionary<string, int>();
+
             using (var reader = new StreamReader("lottery.json"))
             using (var jsonTextReader = new JsonTextReader(reader))
             {
                 dynamic array = new JsonSerializer().Deserialize(jsonTextReader);
-                // Store games in here.
-                Dictionary<string, int> count = new Dictionary<string, int>();
 
                 foreach (var item in array)
                 {
@@ -54,9 +55,9 @@ namespace OK_Lottery_Commission
                         count[gameCombo]++;
                     }
                 }
-
-                return count;
             }
+
+            return count;
         }
 
         static void Main(string[] args)
