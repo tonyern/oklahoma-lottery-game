@@ -68,14 +68,19 @@ namespace OK_Lottery_Commission
             return count;
         }
 
+        static void displayGamesOccurrences(Dictionary<string, int> gameCombo)
+        {
+            // Loop through the count dictionary to output game combo and occurence.
+            foreach (var key in gameCombo.Keys)
+            {
+                Console.WriteLine(key + " was played " + gameCombo[key] + " times.");
+            }
+        }
+
         static void Main(string[] args)
         {
             Dictionary<string, int> gameData = getGamesPlayed(loadJson("https://www.lottery.ok.gov/plays.json"));
-            // Loop through the count dictionary to output game combo and occurence.
-            foreach (var key in gameData.Keys)
-            {
-                Console.WriteLine(key + " was played " + gameData[key] + " times.");
-            }
+            displayGamesOccurrences(gameData);
         }
     }
 }
