@@ -7,7 +7,8 @@ namespace OK_Lottery_Commission
 {
     class Program
     {
-        static void loadJson() {
+        static void loadJson()
+        {
             using (var reader = new StreamReader("lottery.json"))
             using (var jsonTextReader = new JsonTextReader(reader))
             {
@@ -18,15 +19,19 @@ namespace OK_Lottery_Commission
                 foreach (var item in array)
                 {
                     // Extract the games.
-                    string gameCombo = "[";
+                    List<string> game = new List<string>();
                     foreach (string str in item.games_played)
                     {
-                        if (!str.Equals(""))
-                        {
-                            gameCombo += string.Concat(str + ", ");
-                        }
+                        game.Add(str);
                     }
-                    gameCombo += string.Concat("]");
+
+                    game.Sort();
+
+                    string gameCombo = "";
+                    foreach (string name in game)
+                    {
+                        gameCombo += string.Concat(name + ", ");
+                    }
 
                     // Store games within dictionary as keys.
                     // If a certain game combo is not in dictionary. Value is 1 as first one entered.
@@ -45,7 +50,7 @@ namespace OK_Lottery_Commission
                 // Loop through the count dictionary to output game combo and occurence.
                 foreach (var key in count.Keys)
                 {
-                    Console.WriteLine(key + " appears " + count[key] + " times.");
+                    Console.WriteLine(key + " was played " + count[key] + " times.");
                 }
             }
         }
