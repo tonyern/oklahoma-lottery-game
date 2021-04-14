@@ -7,7 +7,8 @@ namespace OK_Lottery_Commission
 {
     class Program
     {
-        static void loadJson() {
+        static Dictionary<string, int> loadJson()
+        {
             using (var reader = new StreamReader("lottery.json"))
             using (var jsonTextReader = new JsonTextReader(reader))
             {
@@ -18,12 +19,24 @@ namespace OK_Lottery_Commission
                 foreach (var item in array)
                 {
                     // Extract the games.
-                    string gameCombo = "[";
+                    List<string> game = new List<string>();
                     foreach (string str in item.games_played)
                     {
-                        if (!str.Equals(""))
+                        game.Add(str);
+                    }
+
+                    game.Sort();
+
+                    string gameCombo = "[";
+                    for (int i = 0; i < game.Count; i++)
+                    {
+                        if (i != game.Count - 1)
                         {
-                            gameCombo += string.Concat(str + ", ");
+                            gameCombo += string.Concat(game[i] + ", ");
+                        }
+                        else
+                        {
+                            gameCombo += string.Concat(game[i]);
                         }
                     }
                     gameCombo += string.Concat("]");
@@ -42,17 +55,18 @@ namespace OK_Lottery_Commission
                     }
                 }
 
-                // Loop through the count dictionary to output game combo and occurence.
-                foreach (var key in count.Keys)
-                {
-                    Console.WriteLine(key + " appears " + count[key] + " times.");
-                }
+                return count;
             }
         }
 
         static void Main(string[] args)
         {
-            loadJson();
+            Dictionary<string, int> gameData = loadJson();
+            // Loop through the count dictionary to output game combo and occurence.
+            foreach (var key in gameData.Keys)
+            {
+                Console.WriteLine(key + " was played " + gameData[key] + " times.");
+            }
         }
     }
 }
