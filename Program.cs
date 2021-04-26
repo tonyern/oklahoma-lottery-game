@@ -79,7 +79,8 @@ namespace OK_Lottery_Commission
 
         static void Main(string[] args)
         {
-            Dictionary<string, int> gameData = getGamesPlayed(loadJson("https://www.lottery.ok.gov/plays.json"));
+            string url = "https://www.lottery.ok.gov/plays.json";
+            Dictionary<string, int> gameData = getGamesPlayed(loadJson(url));
             displayGamesOccurrences(gameData);
         }
     }
